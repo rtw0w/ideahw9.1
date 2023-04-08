@@ -1,20 +1,20 @@
 public class Radio {
     private int currentStation;
     private int currentVolume;
-    private final int MaxStation;
-    private int MaxVolume;
+    private final int maxStation;
+    private int maxVolume;
 
     public Radio() {
-        this.MaxStation = 9;
-        this.MaxVolume = 100;
+        this.maxStation = 9;
+        this.maxVolume = 100;
     }
 
     public Radio(int stationsCount) {
-        this.MaxStation = stationsCount - 1;
+        this.maxStation = stationsCount - 1;
     }
 
     public void next() {
-        if (currentStation != MaxStation) {
+        if (currentStation != maxStation) {
             currentStation++; // 2 пункт про станции
         } else {
             currentStation = 0;
@@ -25,7 +25,7 @@ public class Radio {
         if (currentStation != 0) {
             currentStation--; // 3 пункт про странции
         } else {
-            currentStation = MaxStation;
+            currentStation = maxStation;
         }
     }
 
@@ -37,7 +37,7 @@ public class Radio {
         if (currentStation < 0) {
             return;
         }
-        if (currentStation > MaxStation) {
+        if (currentStation > maxStation) {
             return;
         }
         this.currentStation = currentStation;
@@ -51,17 +51,17 @@ public class Radio {
         if (currentVolume < 0) {
             return;
         }
-        if (currentVolume > MaxVolume) {
+        if (currentVolume > maxVolume) {
             return;
         }
         this.currentVolume = currentVolume;
     }
 
     public void plus() {
-        if (currentVolume != MaxVolume) {
+        if (currentVolume != maxVolume) {
             currentVolume++; // 2 пункт про громкость
         } else {
-            currentVolume = MaxVolume;
+            currentVolume = maxVolume;
         }
     }
 
